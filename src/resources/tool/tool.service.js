@@ -1,4 +1,4 @@
-export default class usersService {
+export default class toolService {
 
     async signUp({}){
         try {
