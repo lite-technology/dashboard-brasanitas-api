@@ -1,6 +1,20 @@
 export default class localService {
 
-    async signUp({}){
+    async create({}){
+        try {
+           
+        } catch (err) {
+            return { error: "internal_error" } ;
+        }
+    }
+    async update({}){
+        try {
+           
+        } catch (err) {
+            return { error: "internal_error" } ;
+        }
+    }
+    async delete({}){
         try {
            
         } catch (err) {
@@ -8,5 +22,4 @@ export default class localService {
         }
     }
 
-    
 }
