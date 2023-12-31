@@ -18,5 +18,21 @@
     "user_already_exists": {
         "message": "User already exists",
         "statusCode": 401
+    },
+    "local_not_found": {
+        "message": "Local not found",
+        "statusCode": 404
+    },
+    "tool_not_found": {
+        "message": "Tool not found",
+        "statusCode": 404
+    },
+    "user_not_found": {
+        "message": "User not found",
+        "statusCode": 404
+    },
+    "plate_not_found": {
+        "message": "Plate not found",
+        "statusCode": 404
     }
 }

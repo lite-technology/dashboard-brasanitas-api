@@ -8,7 +8,7 @@ const ToolSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    validate:{
+    validateSize:{
         type: Number,
         default: 0
     },
@@ -16,4 +16,6 @@ const ToolSchema = mongoose.Schema({
         type: Boolean
     }
 
-})
+});
+
+export default mongoose.model('tool', ToolSchema)

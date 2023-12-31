@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const LocalShema = mongoose.Schema({
     name:{
-        type: string
+        type: String
     },
     date: {
         type: Date,
