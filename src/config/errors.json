@@ -27,7 +27,7 @@
         "message": "Tool not found",
         "statusCode": 404
     },
-    "user_not_found": {
+    "users_not_found": {
         "message": "User not found",
         "statusCode": 404
     },
