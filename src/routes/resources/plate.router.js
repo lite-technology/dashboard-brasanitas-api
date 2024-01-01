@@ -6,6 +6,9 @@ import auth from '../../middlewares/auth.js'
 const service = new plateController();
 const plateRouter = Router();
 
-plateRouter.post("/signup", service.signUp);
+plateRouter.delete("/delete", service.delete);
+plateRouter.post("/create", service.create);
+plateRouter.put("/update", service.update);
+plateRouter.get("/", service.get);
 
 export default plateRouter;

@@ -4,12 +4,13 @@ const PlateSchema = mongoose.Schema({
     name: {
         type: String
     },
-    validate: {
+    validateSize: {
         type: Number,
         default: 0
     },
     expired:{
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     date: {
         type: Date,
@@ -25,7 +26,8 @@ const PlateSchema = mongoose.Schema({
                 default: 0
             },
             expired:{
-                type: Boolean
+                type: Boolean,
+                default: false
             },
             date: {
                 type: Date,

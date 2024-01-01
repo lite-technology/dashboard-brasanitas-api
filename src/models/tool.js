@@ -13,7 +13,8 @@ const ToolSchema = mongoose.Schema({
         default: 0
     },
     expired: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 
 });
