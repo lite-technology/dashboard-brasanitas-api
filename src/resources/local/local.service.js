@@ -6,9 +6,9 @@ export default class localService {
         try {
            var local = new localModel({
                 name
-           }, {new : true});
+           });
 
-           await localModel.save();
+           await local.save();
 
            return { local }
         } catch (err) {
@@ -34,6 +34,14 @@ export default class localService {
  
              await localModel.findByIdAndDelete(id);
             return {}
+        } catch (err) {
+            return { error: "internal_error" } ;
+        }
+    }
+
+    async get({}){
+        try {
+           return await localModel.find().sort({date: -1});
         } catch (err) {
             return { error: "internal_error" } ;
         }

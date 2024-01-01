@@ -11,9 +11,9 @@ log.setup({
 });
 
 
-const PORT = process.env.PORT || 6060
-const server = app.listen(7071, async (a) => {
-    log.info(`🚀 Server iniciado em ${chalk.cyan(process.env.PORT || 6060)}.`);
+const PORT = process.env.PORT
+const server = app.listen(PORT, async (a) => {
+    log.info(`🚀 Server iniciado em ${chalk.cyan(PORT)}.`);
 });
 
 if (config.onHttpsServer) {

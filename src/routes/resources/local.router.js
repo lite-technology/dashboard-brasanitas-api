@@ -9,5 +9,6 @@ const localRouter = Router();
 localRouter.delete("/delete", service.delete);
 localRouter.post("/create", service.create);
 localRouter.put("/update", service.update);
+localRouter.get("/", service.get);
 
 export default localRouter;

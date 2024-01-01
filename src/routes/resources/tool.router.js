@@ -6,6 +6,9 @@ import auth from '../../middlewares/auth.js'
 const service = new toolController();
 const toolRouter = Router();
 
-toolRouter.post("/signup", service.signUp);
+toolRouter.delete("/delete", service.delete);
+toolRouter.post("/create", service.create);
+toolRouter.put("/update", service.update);
+toolRouter.get("/", service.get);
 
 export default toolRouter;
