@@ -2,12 +2,12 @@ import plateModel from "../../models/plate.js";
 
 export default class plateService {
 
-    async create({name, validateSize, timeline}){
+    async create({name, validateSize, color, days}){
         try {
            var plate = new plateModel({
                validateSize,
-               timeline,
-               name,
+               timeline:[],
+               name
            });
 
            await plate.save();

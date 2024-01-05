@@ -2,17 +2,20 @@ import usersModel from "../../models/user.js";
 
 export default class usersService {
 
-    async create({name, local}){
+    async create({name, local, date, validateSize}){
         try {
            var users = new usersModel({
+                date: date ? date : Date.now(),
+                validateSize: validateSize ? Number(validateSize) : 0,
+                local,
                 name,
-                local
            });
 
            await users.save();
 
            return { users }
         } catch (err) {
+            console.log(err)
             return { error: "internal_error" } ;
         }
     }

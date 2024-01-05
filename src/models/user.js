@@ -7,6 +7,14 @@ const UserSchema = new mongoose.Schema({
   local:{
     type: String
   },
+  date:{
+    type: Date,
+    default: Date.now()
+  },
+  validateSize:{
+    type: Number,
+    default: 0
+},
 });
 
 export default mongoose.model('user', UserSchema);

@@ -2,10 +2,11 @@ import localModel from "../../models/local.js";
 
 export default class localService {
 
-    async create({name}){
+    async create({name, date}){
         try {
            var local = new localModel({
-                name
+                name,
+                date: date ? date : Date.now()
            });
 
            await local.save();
@@ -30,6 +31,7 @@ export default class localService {
     async delete({id}){
         try {
             var  local = await localModel.findById(id);
+            console.log(local, id)
             if (!local ) return { error: "local_not_found"};
  
              await localModel.findByIdAndDelete(id);

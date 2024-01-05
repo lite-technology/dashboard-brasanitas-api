@@ -21,7 +21,7 @@ const PlateSchema = mongoose.Schema({
             name: {
                 type: String
             },
-            validate: {
+            validateSize:{
                 type: Number,
                 default: 0
             },
@@ -35,6 +35,12 @@ const PlateSchema = mongoose.Schema({
             },
             description: {
                 type: String
+            },
+            color:{
+                type: String
+            },
+            days:{
+                type: Object
             }
         }
     ]
