@@ -4,6 +4,9 @@ const FormShema = mongoose.Schema({
     date:{
         type: Date
     },
+    fill:{
+        type: Date
+    },
     user:{
         type: String
     },

@@ -34,5 +34,9 @@
     "plate_not_found": {
         "message": "Plate not found",
         "statusCode": 404
+    },
+    "form_not_found": {
+        "message": "Form not found",
+        "statusCode": 404
     }
 }

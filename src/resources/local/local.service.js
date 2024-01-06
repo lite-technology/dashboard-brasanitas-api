@@ -31,7 +31,6 @@ export default class localService {
     async delete({id}){
         try {
             var  local = await localModel.findById(id);
-            console.log(local, id)
             if (!local ) return { error: "local_not_found"};
  
              await localModel.findByIdAndDelete(id);
