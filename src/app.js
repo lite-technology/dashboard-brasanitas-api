@@ -8,6 +8,7 @@ import multer from 'multer';
 import chalk from 'chalk';
 import log from 'gulog';
 import cors from 'cors';
+import moment from 'moment-timezone'; 
 
 import apiLimiter from './middlewares/apiLimiter.js';
 import connectDB from './database/connect.js';
@@ -21,6 +22,7 @@ export const app = express();
 connectDB();
 const CronsService = new Crons();
 
+moment.tz.setDefault('America/Sao_Paulo');
 
 const handleFormDataAndJSON = (req, res, next) => {
   const contentType = req.headers['content-type'];
@@ -59,4 +61,3 @@ app.use((err, req, res, next) => {
 app.listen(config.port, () => {
   console.log(chalk.green(`Server is running on port ${config.port}`));
 });
-
