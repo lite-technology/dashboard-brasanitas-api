@@ -2,10 +2,10 @@ import formModel from "../../models/form.js";
 
 export default class formService {
 
-    async create({date, user, shift, tool, plate, actions,forActions,water}){
+    async create({date, user, shift, tool, plate, actions,forActions,water, local}){
         try {
            var form = new formModel({
-            date: date ? new Date(date) : Date.now(), 
+            date, 
             fill: Date.now(),
             user, 
             shift, 
@@ -13,6 +13,7 @@ export default class formService {
             plate, 
             actions,
             forActions,
+            local,
             water
            });
 

@@ -13,6 +13,9 @@ const FormShema = mongoose.Schema({
     shift:{
         type: String
     },
+    local:{
+        type: String
+    },
     tool:{
         type: Object
     },
