@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 import statisticsRouter from "./resources/statistics.router.js";
+import seguranceRouter from "./resources/segurance.router.js";
 import usersRouter from "./resources/users.router.js";
 import localRouter from "./resources/local.router.js";
 import plateRouter from "./resources/plate.router.js";
@@ -14,6 +15,7 @@ router.get("/ping", (req, res) => {
 });
 
 router.use('/statistics', statisticsRouter);
+router.use('/segurance', seguranceRouter);
 router.use('/users', usersRouter);
 router.use('/local', localRouter);
 router.use('/plate', plateRouter);

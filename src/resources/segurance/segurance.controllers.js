@@ -2,7 +2,7 @@ import { sendError } from "../../app.js";
 
 import SeguranceService from "./segurance.service.js";
 
-export default class plateController {
+export default class seguranceController {
   async create(req, res) {
     const service = new SeguranceService();
     const response = await service.create(req.body);
