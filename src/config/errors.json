@@ -35,6 +35,10 @@
         "message": "Plate not found",
         "statusCode": 404
     },
+    "segurance_not_found": {
+        "message": "Segurance not found",
+        "statusCode": 404
+    },
     "form_not_found": {
         "message": "Form not found",
         "statusCode": 404

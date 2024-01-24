@@ -6,12 +6,10 @@ const SeguranceSchema = mongoose.Schema({
         default: Date.now()
     },
     name:{
-        type:{
-            type: String
-        },
+        type: String
     },
     description:{
-        type: string
+        type: String
     },
     lastUpdate:{
         type: Date
