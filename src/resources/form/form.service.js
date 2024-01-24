@@ -1,11 +1,14 @@
+import moment from "moment-timezone";
+
 import formModel from "../../models/form.js";
 
 export default class formService {
 
     async create({date, user, shift, tool, plate, actions,forActions,water, local}){
+         date = moment(date, 'DD/MM/YYYY');
         try {
            var form = new formModel({
-            date, 
+            date: date ? new Date(date) : Date.now(), 
             fill: Date.now(),
             user, 
             shift, 
