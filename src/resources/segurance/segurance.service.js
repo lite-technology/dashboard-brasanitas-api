@@ -2,10 +2,10 @@ import seguranceModel from "../../models/segurance.js";
 
 export default class plateService {
 
-    async create({date, name, description, lastUpdate, files, observation, questions, status}){
+    async create({name, description, files, observation, questions, status}){
         try {
            var segurance = new seguranceModel({
-            date, name, description, lastUpdate, files, observation, questions, status
+            name, description, lastUpdate: Date.now(), files, observation, questions, status, 
            });
 
            await segurance.save();
@@ -20,7 +20,7 @@ export default class plateService {
            var  segurance = await seguranceModel.findById(id);
            if (!segurance ) return { error: "segurance_not_found"};
 
-           var newsegurance = await seguranceModel.findByIdAndUpdate(id, {$set: { ...data}},  { new: true});
+           var newsegurance = await seguranceModel.findByIdAndUpdate(id, {$set: { ...data,  lastUpdate: Date.now()}},  { new: true});
            return { segurance: newsegurance }
 
         } catch (err) {
