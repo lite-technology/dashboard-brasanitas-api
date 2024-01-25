@@ -5,7 +5,7 @@ export default class plateService {
     async create({date, name, description, lastUpdate, files, observation, questions}){
         try {
            var segurance = new seguranceModel({
-               
+            date, name, description, lastUpdate, files, observation, questions
            });
 
            await segurance.save();
