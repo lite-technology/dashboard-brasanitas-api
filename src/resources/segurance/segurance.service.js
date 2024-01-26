@@ -2,10 +2,10 @@ import seguranceModel from "../../models/segurance.js";
 
 export default class plateService {
 
-    async create({date, name, description, lastUpdate, files, observation, questions}){
+    async create({date, name, description, lastUpdate, files, observation, questions, status}){
         try {
            var segurance = new seguranceModel({
-            date, name, description, lastUpdate, files, observation, questions
+            date, name, description, lastUpdate, files, observation, questions, status
            });
 
            await segurance.save();
@@ -24,6 +24,7 @@ export default class plateService {
            return { segurance: newsegurance }
 
         } catch (err) {
+            console.log(err)
             return { error: "internal_error" } ;
         }
     }

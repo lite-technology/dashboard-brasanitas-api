@@ -22,6 +22,9 @@ const SeguranceSchema = mongoose.Schema({
     },
     questions:[
         {
+            observation:{
+                type: String
+            },
             date:{
                 type: String
             },
@@ -32,15 +35,10 @@ const SeguranceSchema = mongoose.Schema({
                 type: String
             },
             status:{
-                type: Number
+                type: String
             },
             author:{
-                name:{
-                    type: String
-                },
-                id:{
-                    type: String
-                },
+                type: String
             }
         }
     ]
