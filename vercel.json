@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "./src/server.js", "use": "@vercel/node" }
+      ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/" }
+    ],
+    "env": {
+      "PORT": "9090",
+     "MONGOURI_TEST":"mongodb+srv://brasanitasapp:8SyqUkoMdxglXTJU@brasanitas-cluster.6m0y7or.mongodb.net/",
+    "MONGOURI":"mongodb+srv://brasanitasapp:8SyqUkoMdxglXTJU@brasanitas-cluster.6m0y7or.mongodb.net/",
+    "JWT":"Brasa@2024"
+    }
+  }
+  
